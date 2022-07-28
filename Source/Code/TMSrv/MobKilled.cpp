@@ -3130,12 +3130,11 @@ void MobKilled(int target, int conn, int PosX, int PosY)
 
 		int arena = BASE_GetArena(pMob[target].TargetX, pMob[target].TargetY);
 		int village = BASE_GetVillage(pMob[target].TargetX, pMob[target].TargetY);
-		int ZoneUnk = 0;
+	
 
-		if (killed_x == 1 && killed_y == 31)
-
-		if (arena != 5 || village != 5 || ZoneUnk)
+		if (arena != 5 || village != 5)
 		{
+
 			SendClientMessage(target, g_pMessageStringTable[_NN_In_Arena_No_Exp_Loss]);
 
 			if (arena == 5 && village != 5)
